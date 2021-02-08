@@ -22,10 +22,16 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "linebreak-style": "off",
+    "no-use-before-define": "off",
+    "arrow-body-style": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
     "import/no-unresolved": "off",
-    "import/extensions": "off",
     "import/prefer-default-export": "off",
     "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off",
     "react/jsx-filename-extension": [
       1,
       {
@@ -34,6 +40,23 @@
           ".tsx"
         ]
       }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }
